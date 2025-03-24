@@ -1,0 +1,81 @@
+@charset 'utf-8';
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column; /* アイテムを縦に並べる */
+    gap: 20px; /* アイテム間のスペース */
+    padding: 20px;
+}
+
+.item {
+    display: flex;
+    align-items: center; /* 画像とテキストを縦中央に揃える */
+    width: 100%;
+    justify-content: center; /* アイテムを中央揃え */
+    margin-bottom: 20px;  /* アイテムの下にスペースを追加 */
+}
+
+.image {
+    width: 100%; /* 画像を親要素の幅に合わせる */
+    height: auto;  /* 縦横比を保持 */
+    max-width: 100%;  /* 親要素の幅を超えないようにする */
+    display: block; /* インライン要素ではなくブロック要素として扱う */
+    margin: 0 auto;  /* 画像を中央揃え */
+}
+
+.Mouse {
+    color: blue;
+}
+
+.text {
+    font-size: 16px;  /* 文字サイズ */
+    color: rgb(122, 185, 38);  /* 文字色 */
+    line-height: 1.6;  /* 行間を少し広げて読みやすく */
+}
+
+.B-Text {
+    font-weight: bold;  /* カスタマイズのテキストを太字に */
+    color: #00b7ff;  /* カスタマイズの文字色を変更 */
+}
+
+/* スマホ用のスタイル（最大幅768px以下の場合） */
+@media (max-width: 768px) {
+    .image {
+        width: 100%; /* 親要素に合わせて画像を100%の幅にリサイズ */
+        height: auto; /* 縦横比を保持 */
+        margin-right: 0; /* 画像とテキストの間隔をなくす */
+    }
+
+    .item {
+        display: block;  /* アイテムを縦に並べる（横並びを解除） */
+        text-align: center; /* アイテムのテキストを中央揃え */
+        width: 100%;  /* 親要素に合わせて幅を100%に */
+        margin-bottom: 20px;  /* アイテム間にスペース */
+    }
+
+    .text {
+        font-size: 14px; /* スマホ用に文字サイズを小さく調整 */
+        line-height: 1.4; /* 行間を少し狭く */
+        color: rgb(122, 185, 38);  /* 文字色 */
+        padding: 10px;  /* テキストの周りにパディングを追加 */
+    }
+
+    .B-Text {
+        font-weight: bold;
+        color: #00b7ff;  /* カスタマイズの文字色 */
+        font-size: 16px;  /* カスタマイズテキストの文字サイズを少し大きく */
+    }
+
+    .Mouse {
+        font-size: 14px; /* マウスパッドの文字サイズ */
+        color: blue;  /* マウスパッドの文字色 */
+    }
+}
+
+
